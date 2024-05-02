@@ -1,40 +1,43 @@
 <script lang="ts">
-    import { Grid, Row, Column} from 'carbon-components-svelte';
+    import { Grid, Row, Column, Tile } from 'carbon-components-svelte';
 </script>
 
 <header>
-	<nav id="navbar">
-		<Grid fullWidth={true} condensed={true}>
-            <Row>
-                <Column lg={8}>
-                    <a href="/">
-                        <h2>Nikolaos Papanastasis</h2>
-                    </a>
-                </Column>
-                <Column lg={2}>
-                    <a href="/">
-                        <h3>Home</h3>
-                    </a>
-                </Column>
-                <Column lg={2}>
-                    <a href="/about">
-                        <h3>About</h3>
-                    </a>
-                </Column>
-                <Column lg={2}>
-                    <a href="/projects">
-                        <h3>Projects</h3>
-                    </a>
-                </Column>
-                <Column lg={2}>
-                    <a href="/contact">
-                        <h3>Contact</h3>
-                    </a>
-                </Column>
-            </Row>
-        </Grid>
-	</nav>
+    <Tile light={true}>
+        <nav id="navbar">
+            <Grid fullWidth={true} condensed={true}>
+                <Row>
+                    <Column lg={8}>
+                        <a href="/">
+                            <h2>Nikolaos Papanastasis</h2>
+                        </a>
+                    </Column>
+                    <Column lg={2}>
+                        <a href="/">
+                            <span>Home</span>
+                        </a>
+                    </Column>
+                    <Column lg={2}>
+                        <a href="/about">
+                            <span>About</span>
+                        </a>
+                    </Column>
+                    <Column lg={2}>
+                        <a href="/projects">
+                            <span>Projects</span>
+                        </a>
+                    </Column>
+                    <Column lg={2}>
+                        <a href="/contact">
+                            <span>Contact</span>
+                        </a>
+                    </Column>
+                </Row>
+            </Grid>
+        </nav>
+    </Tile>
 </header>
+
 
 <style>
     header {
@@ -47,6 +50,7 @@
 
 	#navbar h2 {
 		width: max-content;
+        display: inline-block;
 	}
 
     #navbar a {
@@ -55,12 +59,13 @@
         width: max-content;
     }
 
-    #navbar a h3 {
-        font-size: 28px;
+    #navbar a span {
+        font-size: 30px;
         width: max-content;
+        display: inline-block;
     }
 
-    #navbar a:hover h3 {
+    #navbar a:hover span {
         color: navy;
     }
 </style>
