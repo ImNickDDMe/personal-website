@@ -6,7 +6,7 @@
     <Grid fullWidth={true} padding={true} condensed={true}>
         <Row>
             <Column sm={{ span: 4, offset: 0 }}>
-                <h1 style="text-align: left;">Learn</h1>
+                <h1>Learn</h1>
             </Column>
             <Column sm={{ span: 3, offset: 1 }}>
                 <h1>Create</h1>
@@ -15,7 +15,7 @@
                 <h1>Observe</h1>
             </Column>
             <Column sm={{ span: 1, offset: 3 }}>
-                <h1 style="text-align: right;">Repeat</h1>
+                <h1>Repeat</h1>
             </Column>
         </Row>
     </Grid>
@@ -31,12 +31,13 @@
         animation-duration: 3s;
         animation-timing-function: ease;
         animation-name: slidein;
+        text-align: center;
     }
 
     @keyframes slidein {
         from {
             margin-left: 100%;
-            width: 150%;
+            width: 100%;
         }
 
         to {

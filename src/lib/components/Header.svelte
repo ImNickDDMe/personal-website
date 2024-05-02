@@ -45,7 +45,7 @@
     }
 
 	#navbar {
-        padding: 48px;
+        padding: 26px;
 	}
 
 	#navbar h2 {
